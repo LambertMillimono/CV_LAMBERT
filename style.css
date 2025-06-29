@@ -1,0 +1,125 @@
+
+:root {
+  --primary-color: #002B5B;
+  --accent-color: #F1F6F9;
+  --text-color: #333;
+  --heading-color: #005792;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.cv-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 3rem auto;
+  background-color: white;
+  box-shadow: 0 10px 30px rgba(0, 43, 91, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.sidebar {
+  background-color: var(--primary-color);
+  color: white;
+  width: 30%;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.sidebar img.photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.sidebar img.photo:hover {
+  transform: scale(1.05);
+}
+
+.sidebar h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.sidebar .nickname {
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.sidebar p, .sidebar li {
+  font-size: 0.9rem;
+  margin: 0.4rem 0;
+}
+
+.sidebar h3 {
+  margin-top: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1rem;
+  border-bottom: 1px solid white;
+  padding-bottom: 0.3rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.content {
+  width: 70%;
+  padding: 2rem 2.5rem;
+}
+
+.content h1 {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--heading-color);
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.3rem;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.content ul {
+  margin-bottom: 1.2rem;
+  padding-left: 1.2rem;
+}
+
+.content ul li {
+  margin-bottom: 0.6rem;
+}
+
+.content section {
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .cv-container {
+    flex-direction: column;
+  }
+  .sidebar, .content {
+    width: 100%;
+    padding: 1.5rem;
+  }
+  .sidebar img.photo {
+    width: 100px;
+    height: 100px;
+  }
+}
+
